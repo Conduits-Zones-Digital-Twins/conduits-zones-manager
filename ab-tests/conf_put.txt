@@ -1,0 +1,72 @@
+{
+    "confId": "conf00001",
+    "confType": "wldt",
+    "confValue": {
+        "engine": {
+            "attributes": {
+                "threadPoolSize": 5,
+                "deviceNameSpace": "it.unimore.dipi.things",
+                "wldtBaseIdentifier": "wldt",
+                "wldtStartupTimeSeconds": 10,
+                "activeProtocolList": {
+                    "activeProtocol1": "mqtt"
+                },
+                "applicationMetricsEnabled": false,
+                "applicationMetricsReportingPeriodSeconds": 10,
+                "metricsReporterList" :{
+                    "metricsReporter1": "csv",
+                    "metricsReporter2": "graphite"
+                },
+                "graphiteReporterAddress": "127.0.0.1",
+                "graphiteReporterPort": 2003,
+                "graphitePrefix": "wldt"
+            }
+        },
+        "workers": [
+            {
+                "workerId": "worker00001",
+                "workerType": "MQTT2MQTT",
+                "attributes": {
+                    "dtForwardingEnabled": true,
+                    "dtPublishingQoS": 2,
+                    "brokerAddress": "127.0.0.1",
+                    "brokerPort": 1883,
+                    "brokerLocal": true,
+                    "brokerClientUsername": null,
+                    "brokerClientPassword": null,
+                    "brokerSecureCommunicationRequired": false,
+                    "brokerServerCertPath": null,
+
+                    "destinationBrokerAddress": "127.0.0.1",
+                    "destinationBrokerPort": 1884,
+                    "destinationBrokerLocal": true,
+                    "destinationBrokerClientUsername": null,
+                    "destinationBrokerClientPassword": null,
+                    "destinationBrokerSecureCommunicationRequired": false,
+                    "destinationBrokerServerCertPath": null,
+
+                    "destinationBrokerBaseTopic": null,
+
+                    "deviceId": "it.unimore.dipi.things:dummy_device:0be64e3d-985d-43f2-b810-10e8e1d6862a",
+
+                    "topicList" : {
+                        "topic1" : {
+                            "id" : "gpsTelemetryTopic",
+                            "resourceId" : "gps",
+                            "topic" : "/topic/iot/device/test/{{device_id}}/gps",
+                            "type" : "device_outgoing"
+                        },
+                        "topic2" : {
+                            "id" : "batteryTelemetryTopic",
+                            "resourceId" : "battery",
+                            "topic" : "/topic/iot/device/test/{{device_id}}/battery",
+                            "type" : "device_outgoing"
+                        }
+
+                    }
+
+                }
+            }
+        ]
+    }
+}

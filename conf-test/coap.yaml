@@ -1,0 +1,6 @@
+cacheEnabled: false
+deviceAddress: "127.0.0.1"
+deviceSecurePort: 5684
+devicePort: 5683
+resourceDiscovery: true
+resourceList: null

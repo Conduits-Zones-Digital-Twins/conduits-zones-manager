@@ -1,0 +1,6 @@
+{
+    "id": null,
+    "type": "edge_node_default",
+    "ipAddress": "127.0.0.1",
+    "dtManagerServiceBaseUrl": "http://127.0.0.1:7070/api/anm"
+}

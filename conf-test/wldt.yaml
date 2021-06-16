@@ -1,0 +1,14 @@
+deviceNameSpace: "it.unimore.dipi.things"
+activeProtocolList:
+  - mqtt
+metricsReporterList:
+  - csv
+  - graphite
+threadPoolSize: 5
+applicationMetricsEnabled: false
+wldtBaseIdentifier: "wldt"
+applicationMetricsReportingPeriodSeconds: 10
+graphiteReporterAddress: "127.0.0.1"
+wldtStartupTimeSeconds: 10
+graphiteReporterPort: 2003
+graphitePrefix: "wldt"

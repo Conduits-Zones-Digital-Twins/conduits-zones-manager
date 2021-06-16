@@ -1,0 +1,37 @@
+dtForwardingEnabled: true
+
+#DT's publishing QoS
+dtPublishingQoS: 0
+
+#Physical Device Broker Parameters
+brokerAddress: 127.0.0.1
+brokerPort: 1883
+brokerLocal: true
+brokerClientUsername: null
+brokerClientPassword: null
+brokerSecureCommunicationRequired: false
+brokerServerCertPath: null
+
+#Destination Broker Parameters
+destinationBrokerAddress: 127.0.0.1
+destinationBrokerPort: 1884
+destinationBrokerLocal: true
+destinationBrokerClientUsername: null
+destinationBrokerClientPassword: null
+destinationBrokerSecureCommunicationRequired: false
+destinationBrokerServerCertPath: null
+
+#e.g., digitaltwin (without the final /)
+destinationBrokerBaseTopic: null
+
+deviceId: "it.unimore.dipi.things:dummy_device:0be64e3d-985d-43f2-b810-10e8e1d6862a"
+
+topicList:
+    - id: gpsTelemetryTopic
+      resourceId: gps
+      topic: /topic/iot/device/test/{{device_id}}/gps
+      type: device_outgoing
+    - id: batteryTelemetryTopic
+      resourceId: battery
+      topic: /topic/iot/device/test/{{device_id}}/battery
+      type: device_outgoing

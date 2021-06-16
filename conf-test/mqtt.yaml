@@ -1,0 +1,29 @@
+brokerPort: 1883
+destinationBrokerPort: 1884
+brokerClientPassword: null
+deviceId: "it.unimore.dipi.things:dummy_device:0be64e3d-985d-43f2-b810-10e8e1d6862a"
+brokerAddress: "127.0.0.1"
+brokerClientUsername: null
+destinationBrokerServerCertPath: null
+topicList:
+topic1:
+    - id: "gpsTelemetryTopic"
+      resourceId: "gps"
+      topic: "/topic/iot/device/test/{{device_id}}/gps"
+      type: "device_outgoing"
+topic2:
+    - id: "batteryTelemetryTopic"
+      resourceId: "battery"
+      topic: "/topic/iot/device/test/{{device_id}}/battery"
+      type: "device_outgoing"
+destinationBrokerBaseTopic: null
+dtForwardingEnabled: true
+destinationBrokerAddress: "127.0.0.1"
+destinationBrokerLocal: true
+destinationBrokerSecureCommunicationRequired: false
+dtPublishingQoS: 2
+brokerLocal: true
+destinationBrokerClientPassword: null
+brokerServerCertPath: null
+destinationBrokerClientUsername: null
+brokerSecureCommunicationRequired: false
